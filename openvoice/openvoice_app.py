@@ -243,10 +243,10 @@ with gr.Blocks(analytics_enabled=False) as demo:
                 max_choices=1,
                 value="default",
             )
-            ref_gr = gr.Audio(
+            ref_gr = gr.File(
                 label="Reference Audio",
-                info="Click on the ✎ button to upload your own target speaker audio",
-                type="filepath",
+                info="Select your own target speaker audio file",
+                file_types=["audio/*"],
                 value="resources/demo_speaker2.mp3",
             )
             tos_gr = gr.Checkbox(
